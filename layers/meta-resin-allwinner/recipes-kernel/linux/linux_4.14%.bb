@@ -20,7 +20,7 @@ KERNEL_EXTRA_ARGS += "LOADADDR=${UBOOT_ENTRYPOINT}"
 	
 # 4.13.12
 PV = "4.14.14+git${SRCPV}"
-SRCREV_pn-${PN} = "v4.14.14"
+SRCREV_pn-${PN} = "v4.14.15"
 
 
 SRC_URI = "git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git;protocol=git;branch=linux-4.14.y \
