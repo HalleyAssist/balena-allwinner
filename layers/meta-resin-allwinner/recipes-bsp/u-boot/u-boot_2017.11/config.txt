@@ -1,0 +1,6 @@
+verbosity=1
+console=serial
+overlay_prefix=sun8i-h3
+rootfstype=ext4
+overlays=uart1 uart2 usbhost1 usbhost2
+elevator=noop
