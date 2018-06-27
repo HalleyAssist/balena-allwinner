@@ -17,10 +17,9 @@ RDEPENDS_kernel-base += "kernel-devicetree"
 DEFAULT_PREFERENCE = "-1" 
 
 KERNEL_EXTRA_ARGS += "LOADADDR=${UBOOT_ENTRYPOINT}"
-	
-# 4.13.12
-PV = "4.14.15+git${SRCPV}"
-SRCREV_pn-${PN} = "v4.14.15"
+
+PV = "4.14.51+git${SRCPV}"
+SRCREV_pn-${PN} = "v4.14.51"
 
 
 SRC_URI = "git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git;protocol=git;branch=linux-4.14.y \

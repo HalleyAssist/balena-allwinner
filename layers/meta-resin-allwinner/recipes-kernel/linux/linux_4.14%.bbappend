@@ -77,6 +77,7 @@ SRC_URI_append = " \
     file://add-nanopi-m1-plus2.patch \
     file://add-opi-pc-plus-wifi-pwrseq.patch \
     file://add-orangepi-zeroplus2.patch \
+    file://add_otg_neoair.patch \
     file://add-overlay-compilation-support.patch \
     file://add-r40-m2ultra-a83t-i2s-i2c.patch \
     file://add-realtek-8189fs-driver.patch \
