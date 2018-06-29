@@ -121,8 +121,6 @@ SRC_URI = "https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${PV}.tar.xz \
     file://sunxi64-pine64-plus-ethernet-fix.patch \
     file://sunxi-add-orangepi-zero-plus.patch \
     file://sunxi-h3-h5-uart3_rts_cts_pins.patch \ 
-    file://sunxi-network-dwmac_h3_gigabit_boards_new_external_mdio.patch \
-    file://sunxi-network-dwmac-sun8i_backport_from_4.15-rc.patch \
     file://sunxi-wireless-enable-friendlyarm-neoair.patch \
     file://defconfig \
         "
