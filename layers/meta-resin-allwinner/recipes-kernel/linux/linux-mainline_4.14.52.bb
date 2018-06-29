@@ -90,6 +90,7 @@ SRC_URI = "https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${PV}.tar.xz \
     file://add-nanopi-m1-plus2.patch \
     file://add-opi-pc-plus-wifi-pwrseq.patch \
     file://add-orangepi-zeroplus2.patch \
+	file://add-h3-overlays.patch \
     file://add-overlay-compilation-support.patch \
     file://add-r40-m2ultra-a83t-i2s-i2c.patch \
     file://add-realtek-8189fs-driver.patch \
