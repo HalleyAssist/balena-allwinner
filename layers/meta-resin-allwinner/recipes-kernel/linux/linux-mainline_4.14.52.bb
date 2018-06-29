@@ -140,4 +140,3 @@ SRC_URI = "https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${PV}.tar.xz \
     file://sunxi-wireless-enable-friendlyarm-neoair.patch \
     file://defconfig \
         "
-S = "${WORKDIR}/git"
