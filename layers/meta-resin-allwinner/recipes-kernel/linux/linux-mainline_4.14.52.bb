@@ -21,6 +21,8 @@ KERNEL_EXTRA_ARGS += "LOADADDR=${UBOOT_ENTRYPOINT}"
 
 S = "${WORKDIR}/linux-${PV}"
 
+SRC_URI[md5sum] = "72523b07709e953cbd9d5c0d75780a88"
+
 
 SRC_URI = "https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${PV}.tar.xz \
     file://00-19-add-H3-i2s-DT-nodes.patch \
