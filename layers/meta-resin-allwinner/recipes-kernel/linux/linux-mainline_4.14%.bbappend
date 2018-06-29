@@ -1,6 +1,6 @@
 inherit kernel-resin
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/linux-4.14:"
+FILESEXTRAPATHS_prepend := "${THISDIR}/linux-mainline-4.14:"
 
 # These patches were fetched from the lovely guys at armbian: https://github.com/armbian/build/tree/master/patch/kernel/sunxi-next
 SRC_URI_append = " \
