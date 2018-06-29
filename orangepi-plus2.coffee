@@ -4,26 +4,26 @@ deviceTypesCommon = require '@resin.io/device-types/common'
 
 module.exports =
 	version: 1
-	slug: 'bananapi-m1-plus'
-	name: 'BananaPi-M1+'
+	slug: 'orangepi-plus2'
+	name: 'Orange Pi Plus2'
 	arch: 'armv7hf'
 	state: 'experimental'
 
 	instructions: commonImg.instructions
 	gettingStartedLink:
-		windows: 'https://docs.resin.io/bananapi-m1-plus/nodejs/getting-started/#adding-your-first-device'
-		osx: 'https://docs.resin.io/bananapi-m1-plus/nodejs/getting-started/#adding-your-first-device'
-		linux: 'https://docs.resin.io/bananapi-m1-plus/nodejs/getting-started/#adding-your-first-device'
+		windows: 'https://docs.resin.io/orangepi-plus2/nodejs/getting-started/#adding-your-first-device'
+		osx: 'https://docs.resin.io/orangepi-plus2/nodejs/getting-started/#adding-your-first-device'
+		linux: 'https://docs.resin.io/orangepi-plus2/nodejs/getting-started/#adding-your-first-device'
 	supportsBlink: true
 
 	options: [ networkOptions.group ]
 
 	yocto:
-		machine: 'bananapi-m1-plus'
-		image: 'resin-image'
+		machine: 'orangepi-plus2'
+		image: 'resin-image-flasher'
 		fstype: 'resinos-img'
 		version: 'yocto-rocko'
-		deployArtifact: 'resin-image-bananapi-m1-plus.resinos-img'
+		deployArtifact: 'resin-image-flasher-orangepi-plus2.resinos-img'
 		compressed: true
 
 	configuration:
