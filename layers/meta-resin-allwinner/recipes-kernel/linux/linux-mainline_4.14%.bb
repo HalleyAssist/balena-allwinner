@@ -16,23 +16,13 @@ KBRANCH ?= "master"
 # Pull in the devicetree files into the rootfs
 RDEPENDS_${KERNEL_PACKAGE_NAME}-base += "kernel-devicetree"
 
+
 KERNEL_EXTRA_ARGS += "LOADADDR=${UBOOT_ENTRYPOINT}"
 
 S = "${WORKDIR}/linux-${PV}"
 
-# require recipes-kernel/linux/linux-dtb.inc
-#require recipes-kernel/linux/linux.inc
 
-# Default is to use stable kernel version
-# If you want to use latest git version set to "1"
-DEFAULT_PREFERENCE = "-1" 
-
-
-PV = "4.14.14+git${SRCPV}"
-SRCREV_pn-${PN} = "v4.14.14"
-
-
-SRC_URI = "git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git;protocol=git;branch=linux-4.14.y \
+SRC_URI = "https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${PV}.tar.xz \
     file://00-19-add-H3-i2s-DT-nodes.patch \
     file://00-20-add-i2s-DT-pins.patch \
     file://00-readd-dwmac-sun8i-compatibles.patch \
