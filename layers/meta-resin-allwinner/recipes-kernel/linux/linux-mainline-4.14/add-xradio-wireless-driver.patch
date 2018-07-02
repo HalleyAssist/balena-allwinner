@@ -1656,7 +1656,7 @@ index 0000000..6487b3e
 +		.rate = 0xFF,
 +	};
 +
-+	frame.skb = ieee80211_nullfunc_get(priv->hw, priv->vif);
++	frame.skb = ieee80211_nullfunc_get(priv->hw, priv->vif, false);
 +	if (WARN_ON(!frame.skb))
 +		return -ENOMEM;
 +

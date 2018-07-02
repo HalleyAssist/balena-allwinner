@@ -1,9 +1,30 @@
-inherit kernel-resin
+SECTION = "kernel"
+DESCRIPTION = "Mainline Linux kernel"
+LICENSE = "GPLv2"
+LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
+COMPATIBLE_MACHINE = "(sun4i|sun5i|sun7i|sun8i|sun50i)"
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/linux-4.14:"
+inherit kernel
+# inherit kernel-resin
 
-# These patches were fetched from the lovely guys at armbian: https://github.com/armbian/build/tree/master/patch/kernel/sunxi-next
-SRC_URI_append = " \
+FILESEXTRAPATHS_prepend := "${THISDIR}/linux-mainline-4.14:"
+
+# Since we're not using git, this doesn't make a difference, but we need to fill
+# in something or kernel-yocto.bbclass will fail.
+KBRANCH ?= "master"
+
+# Pull in the devicetree files into the rootfs
+RDEPENDS_${KERNEL_PACKAGE_NAME}-base += "kernel-devicetree"
+
+
+KERNEL_EXTRA_ARGS += "LOADADDR=${UBOOT_ENTRYPOINT}"
+
+S = "${WORKDIR}/linux-${PV}"
+
+SRC_URI[md5sum] = "72523b07709e953cbd9d5c0d75780a88"
+
+
+SRC_URI = "https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${PV}.tar.xz \
     file://00-19-add-H3-i2s-DT-nodes.patch \
     file://00-20-add-i2s-DT-pins.patch \
     file://00-readd-dwmac-sun8i-compatibles.patch \
@@ -17,19 +38,11 @@ SRC_URI_append = " \
     file://07-1-add-H3-H5-DE2-DT-nodes.patch \
     file://07-2-add-H3-DE2-DT-nodes.patch \
     file://07-3-add-H5-DE2-DT-nodes.patch \
-    file://08-dw-hdmi-enable-polling.patch \
-    file://09-dw-hdmi-add-workarounds.patch \
-    file://10-clk-hdmi-allow-set-rate-parent.patch \
     file://11-drm-sun4i-allow-building-arm64.patch \
     file://12-dw-hdmi-add-H3-glue.patch \
     file://13-dw-hdmi-add-DT-nodes.patch \
     file://14-sun4i-i2s-workarounds.patch \
     file://15-clk-sunxi-ng-fix-runtime-warnings.patch \
-    file://16-H3-add-HDMI-sound-nodes.patch \
-    file://17-1-enable-hdmi-video-on-several-boards.patch \
-    file://17-2-enable-hdmi-video-on-several-boards.patch \
-    file://18-1-enable-hdmi-sound-on-several-boards.patch \
-    file://18-2-enable-hdmi-sound-on-several-boards.patch \
     file://19-add-audio-workarounds.patch \
     file://21-sun4i-gpadc-iio-add-split-sun8i.patch \
     file://22-sun4i-gpadc-iio-add-H3-support.patch \
@@ -105,25 +118,9 @@ SRC_URI_append = " \
     file://set-DMA-coherent-pool-to-2M.patch \
     file://spidev-remove-warnings.patch \
     file://staging-rtl8723bs-hide-nolinked-power-save-info-when-not-debugging.patch \
-    file://sunxi64-hdmi-thermal-dma-pmw-enable.patch \
     file://sunxi64-pine64-plus-ethernet-fix.patch \
     file://sunxi-add-orangepi-zero-plus.patch \
-    file://sunxi-h3-h5-uart3_rts_cts_pins.patch \
-    file://sunxi-hdmi-enable-friendlyarm-m1.patch \
-    file://sunxi-hdmi-enable-friendlyarm-m1plus.patch \
-    file://sunxi-hdmi-enable-friendlyarm-neoplus2.patch \
-    file://sunxi-hdmi-enable-sinovoip-bananam2plus.patch \
-    file://sunxi-hdmi-otg_enble-opi-zero2plus-h5.patch \
-    file://sunxi-network-dwmac_h3_gigabit_boards_new_external_mdio.patch \
-    file://sunxi-network-dwmac-sun8i_backport_from_4.15-rc.patch \
+    file://sunxi-h3-h5-uart3_rts_cts_pins.patch \ 
     file://sunxi-wireless-enable-friendlyarm-neoair.patch \
     file://defconfig \
-    "
-
-RESIN_CONFIGS_append_orange-pi-lite = " \
-    8189fs \
-    "
-
-RESIN_CONFIGS[8189fs] ?= " \
-    CONFIG_RTL8189FS=m \
-"
+        "
