@@ -4,5 +4,5 @@ UBOOT_KCONFIG_SUPPORT = "1"
 inherit resin-u-boot
 
 do_deploy_append() {
-    install -m 0644 ${WORKDIR}/armbianEnv.txt ${DEPLOYDIR}/armbianEnv.txt
+    install -m 0644 ${WORKDIR}/config.txt ${DEPLOYDIR}/config.txt
 }
