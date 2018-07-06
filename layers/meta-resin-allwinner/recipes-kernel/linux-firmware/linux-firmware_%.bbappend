@@ -1,7 +1,6 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
 # These firmware files are fetched from  https://github.com/armbian/firmware/tree/master/brcm
-# and https://github.com/RPi-Distro/firmware-nonfree
 SRC_URI_append = " \
     file://brcmfmac43430-sdio.bin \
     file://brcmfmac43430-sdio.txt \
