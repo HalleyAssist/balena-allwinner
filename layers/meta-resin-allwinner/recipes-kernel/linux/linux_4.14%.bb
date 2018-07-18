@@ -18,8 +18,8 @@ DEFAULT_PREFERENCE = "-1"
 
 KERNEL_EXTRA_ARGS += "LOADADDR=${UBOOT_ENTRYPOINT}"
 
-PV = "4.14.55+git${SRCPV}"
-SRCREV_pn-${PN} = "v4.14.55"
+PV = "4.14.56+git${SRCPV}"
+SRCREV_pn-${PN} = "v4.14.56"
 
 
 SRC_URI = "git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git;protocol=git;branch=linux-4.14.y \
