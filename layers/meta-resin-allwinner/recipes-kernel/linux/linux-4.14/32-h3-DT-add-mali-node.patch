@@ -2,7 +2,7 @@ diff --git a/arch/arm/boot/dts/sun8i-h3.dtsi b/arch/arm/boot/dts/sun8i-h3.dtsi
 index b36f9f42..f2973669 100644
 --- a/arch/arm/boot/dts/sun8i-h3.dtsi
 +++ b/arch/arm/boot/dts/sun8i-h3.dtsi
-@@ -72,6 +72,49 @@
+@@ -72,6 +72,59 @@
  		};
  	};
  
@@ -33,6 +33,17 @@ index b36f9f42..f2973669 100644
 +			assigned-clocks = <&ccu CLK_GPU>;
 +			assigned-clock-rates = <384000000>;
 +		};
++
++		crypto: crypto@1c15000 {
++			compatible = "allwinner,sun50i-h5-crypto";
++			reg = <0x01c15000 0x1000>;
++			interrupts = <GIC_SPI 94 IRQ_TYPE_LEVEL_HIGH>;
++			interrupt-names = "ce_ns";
++			resets = <&ccu RST_BUS_CE>;
++			reset-names = "ahb";
++			clocks = <&ccu CLK_BUS_CE>, <&ccu CLK_CE>;
++			clock-names = "ahb1_ce", "mod";
++	   };
 +	};
 +
 +	reserved-memory {

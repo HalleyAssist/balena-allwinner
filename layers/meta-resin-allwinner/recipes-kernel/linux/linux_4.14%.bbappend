@@ -118,6 +118,9 @@ SRC_URI_append = " \
     file://sunxi-network-dwmac_h3_gigabit_boards_new_external_mdio.patch \
     file://sunxi-network-dwmac-sun8i_backport_from_4.15-rc.patch \
     file://sunxi-wireless-enable-friendlyarm-neoair.patch \
+    file://add-crypto-engine-kconfig.patch \
+    file://add-allwinner-crypto-engine.patch \
+    file://add-missing-crypto-rng-cast.patch \
     file://defconfig \
     "
 
