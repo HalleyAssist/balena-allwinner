@@ -1,0 +1,34 @@
+diff --git a/drivers/crypto/Kconfig b/drivers/crypto/Kconfig
+index b26e5d2b99a48..9bb540f882778 100644
+--- a/drivers/crypto/Kconfig
++++ b/drivers/crypto/Kconfig
+@@ -10,6 +10,8 @@ menuconfig CRYPTO_HW
+ 
+ if CRYPTO_HW
+ 
++source "drivers/crypto/allwinner/Kconfig"
++
+ config CRYPTO_DEV_PADLOCK
+ 	tristate "Support for VIA PadLock ACE"
+ 	depends on X86 && !UML
+diff --git a/drivers/crypto/Makefile b/drivers/crypto/Makefile
+index ee5ec5c94383c..ad28039d8f626 100644
+--- a/drivers/crypto/Makefile
++++ b/drivers/crypto/Makefile
+@@ -1,4 +1,5 @@
+ # SPDX-License-Identifier: GPL-2.0
++obj-$(CONFIG_CRYPTO_DEV_ALLWINNER) += allwinner/
+ obj-$(CONFIG_CRYPTO_DEV_ATMEL_AES) += atmel-aes.o
+ obj-$(CONFIG_CRYPTO_DEV_ATMEL_SHA) += atmel-sha.o
+ obj-$(CONFIG_CRYPTO_DEV_ATMEL_TDES) += atmel-tdes.o
+diff --git a/drivers/crypto/allwinner/Kconfig b/drivers/crypto/allwinner/Kconfig
+new file mode 100644
+index 0000000000000..0768e27c0c74f
+--- /dev/null
++++ b/drivers/crypto/allwinner/Kconfig
+@@ -0,0 +1,5 @@
++config CRYPTO_DEV_ALLWINNER
++	bool "Support for Allwinner cryptographic accelerator"
++	default y if ARCH_SUNXI
++	help
++	  Say Y here to get to see options for Allwinner hardware crypto devices
