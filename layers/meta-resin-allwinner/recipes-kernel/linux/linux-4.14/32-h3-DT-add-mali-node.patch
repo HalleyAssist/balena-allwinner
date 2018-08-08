@@ -2,7 +2,7 @@ diff --git a/arch/arm/boot/dts/sun8i-h3.dtsi b/arch/arm/boot/dts/sun8i-h3.dtsi
 index b36f9f42..f2973669 100644
 --- a/arch/arm/boot/dts/sun8i-h3.dtsi
 +++ b/arch/arm/boot/dts/sun8i-h3.dtsi
-@@ -72,6 +72,59 @@
+@@ -72,6 +72,60 @@
  		};
  	};
  
