@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/arm 4.14.57 Kernel Configuration
+# Linux/arm 4.14.59 Kernel Configuration
 #
 CONFIG_ARM=y
 CONFIG_ARM_HAS_SG_CHAIN=y
@@ -5555,3 +5555,5 @@ CONFIG_VIRTUALIZATION=y
 # CONFIG_VHOST_NET is not set
 # CONFIG_VHOST_SCSI is not set
 # CONFIG_VHOST_CROSS_ENDIAN_LEGACY is not set
+CRYPTO_DEV_SUN8I_CE_PRNG=y
+CRYPTO_DEV_SUN8I_CE=y
