@@ -10,12 +10,10 @@ Currently Supported Boards:
 * [Orange Pi Lite](http://www.orangepi.org/orangepilite/)
 
 ## TODO:
+* Find a way to add the `bbea815ee2795b2f4230826c0c6b8814` `LIC_FILES_CHKSUM` to `poky/scripts/lib/recipetool/create.py` and `meta-openembedded/meta-oe/recipes-kernel/linux/linux.inc`
+* Discover why meta-resin's `meta-resin-common/recipes-containers/docker-disk/docker-disk.bb` needs TARGET_{RESPOSOITORY,TAG} set with `=` instead of `?=`.
+* Update resin-yocto-scripts when #124 is merged
 * add integration with resinHUP in u-boot
-* BUG: One of the DT overlays throws the following error: `libfdt fdt_path_offset() returned FDT_ERR_NOTFOUND`
-* support more boards:
-    * Orange pi plus 2e
-    * Nanopi m1
-    * Nanopi neo 2 plus (H5)
 
 ## Clone/Initialize the repository
 
