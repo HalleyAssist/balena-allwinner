@@ -109,7 +109,6 @@ SRC_URI_append = " \
     file://sunxi64-hdmi-thermal-dma-pmw-enable.patch \
     file://sunxi64-pine64-plus-ethernet-fix.patch \
     file://sunxi-add-orangepi-zero-plus.patch \
-    file://sunxi-h3-h5-uart3_rts_cts_pins.patch \
     file://sunxi-hdmi-enable-friendlyarm-m1.patch \
     file://sunxi-hdmi-enable-friendlyarm-m1plus.patch \
     file://sunxi-hdmi-enable-friendlyarm-neoplus2.patch \
@@ -118,11 +117,10 @@ SRC_URI_append = " \
     file://sunxi-network-dwmac_h3_gigabit_boards_new_external_mdio.patch \
     file://sunxi-network-dwmac-sun8i_backport_from_4.15-rc.patch \
     file://sunxi-wireless-enable-friendlyarm-neoair.patch \
-    file://add-crypto-engine-kconfig.patch \
-    file://add-allwinner-crypto-engine.patch \
-    file://add-missing-crypto-rng-cast.patch \
     file://defconfig \
     "
+#    file://sunxi-h3-h5-uart3_rts_cts_pins.patch \
+#
 
 RESIN_CONFIGS_append_orange-pi-lite = " \
     8189fs \
