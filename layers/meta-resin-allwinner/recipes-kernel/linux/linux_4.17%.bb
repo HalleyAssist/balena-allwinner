@@ -1,13 +1,13 @@
 SECTION = "kernel"
 DESCRIPTION = "Mainline Linux kernel with patches from megous"
 LICENSE = "GPLv2"
-LIC_FILES_CHKSUM = "file://COPYING;md5=bbea815ee2795b2f4230826c0c6b8814"
 COMPATIBLE_MACHINE = "(sun4i|sun5i|sun7i|sun8i)"
 
 inherit kernel
-
 require recipes-kernel/linux/linux-dtb.inc
 require recipes-kernel/linux/linux.inc
+
+LIC_FILES_CHKSUM = "file://COPYING;md5=bbea815ee2795b2f4230826c0c6b8814"
 
 # Pull in the devicetree files into the rootfs
 RDEPENDS_kernel-base += "kernel-devicetree"
