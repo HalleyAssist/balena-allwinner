@@ -41,7 +41,6 @@ SRC_URI_append = " \
     file://29-sun4i-gpadc-iio-add-h5-thermal-zone.patch \
     file://30-sun4i-drm-add-GEM-allocator.patch \
     file://31-drm-gem-cma-export-allocator.patch \
-    file://32-h3-DT-add-mali-node.patch \
     file://33-pll-gpu-allow-set-rate-parent.patch \
     file://40-add-SY8106A-regulator-driver.patch \
     file://41-h3-h5-Add-r_i2c-controller.patch \
@@ -117,10 +116,9 @@ SRC_URI_append = " \
     file://sunxi-network-dwmac_h3_gigabit_boards_new_external_mdio.patch \
     file://sunxi-network-dwmac-sun8i_backport_from_4.15-rc.patch \
     file://sunxi-wireless-enable-friendlyarm-neoair.patch \
+    file://sunxi-h3-h5-uart3_rts_cts_pins.patch \
     file://defconfig \
     "
-#    file://sunxi-h3-h5-uart3_rts_cts_pins.patch \
-#
 
 RESIN_CONFIGS_append_orange-pi-lite = " \
     8189fs \
