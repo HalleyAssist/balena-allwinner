@@ -98,7 +98,6 @@ SRC_URI_append = " \
     file://fix-xradio-interrupt.patch \
     file://fix-zeroplus2-mmc0-cd-polarity.patch \
     file://lime-a10-add-240-mhz-cpufreq.patch \
-    file://linux-999-revert-softirq-let-ksoftirqd-do-its-job.patch \
     file://memolry-leak-fix-r8723bs.patch \
     file://rtc-sunxi-clocksource.patch \
     file://scripts-dtc-import-updates.patch \

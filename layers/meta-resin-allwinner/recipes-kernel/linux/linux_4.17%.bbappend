@@ -17,7 +17,6 @@ SRC_URI_append = "\
 	file://general-add-nand-H27UBG8T2BTR.patch \
 	file://general-add-overlay-compilation-support.patch \
 	file://general-add-proc-cpuinfo-entries.patch \
-	file://general-aufs4.17-20180611.patch \
 	file://general-enable-allwinner-SoCs-SID-support.patch \
 	file://general-enable-kernel-dtbs-symbol-generation.patch \
 	file://general-h3-h5-Add-r_i2c-controller.patch \
@@ -53,7 +52,6 @@ SRC_URI_append = "\
 	file://update-board-add-nanopi-neo-core2.patch \
 	file://update-nanopi-neo2-v1.1-DT.patch \
 	file://update-nanopi-neo-plus2-enable-regulator-fix-leds.patch \
-	file://dvb-revert-softirq-let-ksoftirqd-do-its-job.patch \
 	file://dvfs-regulator-opi-2.patch \
 	file://dvfs-regulator-opi-pc2.patch \
 	file://dvfs-regulator-opi-pc.patch \
