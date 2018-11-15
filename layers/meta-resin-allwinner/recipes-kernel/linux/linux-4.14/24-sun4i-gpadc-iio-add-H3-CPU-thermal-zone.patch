@@ -23,37 +23,37 @@ index b36f9f423..0ad8e3e80 100644
 +
 +			trips {
 +				cpu_warm: cpu_warm {
-+					temperature = <65000>;
++					temperature = <60000>;
 +					hysteresis = <2000>;
 +					type = "passive";
 +				};
 +
 +				cpu_hot_pre: cpu_hot_pre {
-+					temperature = <70000>;
++					temperature = <65000>;
 +					hysteresis = <2000>;
 +					type = "passive";
 +				};
 +
 +				cpu_hot: cpu_hot {
-+					temperature = <75000>;
++					temperature = <70000>;
 +					hysteresis = <2000>;
 +					type = "passive";
 +				};
 +
 +				cpu_very_hot_pre: cpu_very_hot_pre {
-+					temperature = <85000>;
++					temperature = <75000>;
 +					hysteresis = <2000>;
 +					type = "passive";
 +				};
 +
 +				cpu_very_hot: cpu_very_hot {
-+					temperature = <90000>;
++					temperature = <80000>;
 +					hysteresis = <2000>;
 +					type = "passive";
 +				};
 +
 +				cpu_crit: cpu_crit {
-+					temperature = <105000>;
++					temperature = <85000>;
 +					hysteresis = <2000>;
 +					type = "critical";
 +				};
