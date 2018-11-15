@@ -14,6 +14,7 @@ setenv logo "disabled"
 setenv overlay_prefix "sun8i-h3"
 setenv rootfstype "ext4"
 setenv verbosity "1"
+setenv overlays "uart1 uart2 usbhost1 usbhost2"
 
 # Sevice number of eMMC is 1, SD card is 0
 if itest.b *0x28 == 0x00; then

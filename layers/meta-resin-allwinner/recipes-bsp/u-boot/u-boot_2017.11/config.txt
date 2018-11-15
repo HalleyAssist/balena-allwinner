@@ -1,1 +1,1 @@
-overlays=uart1 uart2 usbhost1 usbhost2
+
